@@ -3,6 +3,7 @@ import { loadFull } from "tsparticles";
 import React, { useCallback } from "react";
 
 const ParticlesContainer = () => {
+  // init;
   const particlesInit = useCallback(async (engine) => {
     await loadFull(engine);
   }, []);
@@ -12,14 +13,14 @@ const ParticlesContainer = () => {
   return (
     <Particles
       className="w-full h-full absolute translate-z-0"
-      id="tsparticles"
+      id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         fullScreen: { enable: false },
         background: {
           color: {
-            value:'#e68e2e',
+            value: '',
           },
         },
         fpsLimit: 120,
@@ -47,7 +48,7 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: '#e68e2e',
+            value: "#e68e2e",
           },
           links: {
             color: '#f5d393',
@@ -60,7 +61,7 @@ const ParticlesContainer = () => {
             enable: true,
           },
           move: {
-            direction: 'none',
+            directions: 'none',
             enable: true,
             outModes: {
               default: 'bounce',
